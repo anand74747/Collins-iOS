@@ -1,0 +1,259 @@
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #ce1126;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url("/Close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Use this for bottom-outside close button */
+.close-btn-bottom {
+  position: absolute;
+  right: -7px;
+  bottom: -8px;
+  z-index: 40;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 2px solid #d32f2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s;
+}
+.video-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 7vw;
+  box-sizing: border-box;
+}
+
+.video-popup-content {
+  background: transparent;
+  border: none;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  /* aspect-ratio: 16/9; */
+  margin: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #d9d9d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-image: url("/Video.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.play-button-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.scan-result-info {
+  padding: 0 30px 20px;
+}
+
+.scan-result-info h2 {
+  color: #ce1126;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.video-container iframe,
+.video-player {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+.video-player {
+  object-fit: contain;
+}
+
+.video-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ce1126;
+  border-radius: 15px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(206, 17, 38, 0.3);
+  border-top: 4px solid #ce1126;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.video-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(206, 17, 38, 0.1);
+  color: #ce1126;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.no-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  color: #ce1126;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  /* aspect-ratio: 16/9; */
+  margin: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #d9d9d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.swiper-pagination {
+  position: relative;
+  margin-top: 40px; /* moves the dots up from the bottom edge */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .video-container {
+    border-radius: 12px;
+    border-width: 6px;
+  }
+  .close-btn-bottom {
+    right: 17px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    border-radius: 8px;
+    border-width: 4px;
+  }
+  .scan-result-info {
+    padding: 0 8px 8px;
+  }
+  .scan-result-info h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .close-btn-bottom {
+    right: 7px;
+    bottom: -3px;
+  }
+}
+
+.close-btn-bottom {
+  position: absolute;
+  right: -7px;
+  bottom: -8px;
+  z-index: 40;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #ce1126;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url("/Close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,129 @@
+.image-popup-arrow {
+  /* ...existing code... */
+}
+
+@media (max-width: 768px) {
+  .image-popup-arrow {
+    width: 42px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .image-popup-arrow-left {
+    left: -28px;
+  }
+  .image-popup-arrow-right {
+    right: -28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-popup-arrow {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+  .image-popup-arrow-left {
+    left: -18px;
+  }
+  .image-popup-arrow-right {
+    right: -18px;
+  }
+}
+.image-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.image-popup-content {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-popup-img {
+  max-width: 80vw;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+.image-popup-close {
+  position: absolute;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.image-popup-close-bottom {
+  right: -4px;
+  bottom: -1px;
+  top: auto;
+}
+
+.image-popup-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.image-popup-arrow-left {
+  left: -40px;
+  transform: translateY(-50%);
+  z-index: 1500;
+}
+.image-popup-arrow-right {
+  right: -40px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .image-popup-arrow-left {
+    left: -28px;
+  }
+  .image-popup-arrow-right {
+    right: -28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-popup-arrow-left {
+    left: -18px;
+  }
+  .image-popup-arrow-right {
+    right: -18px;
+  }
+}
