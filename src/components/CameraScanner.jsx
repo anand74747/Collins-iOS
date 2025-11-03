@@ -287,7 +287,7 @@ const CameraScanner = ({ onScanSuccess }) => {
                 {isLoading ? (
                   <div className="spinner"></div>
                 ) : (
-                  <span className="capture-text">AR SCANNER</span>
+                  <span className="capture-text">SCAN OBJECT</span>
                 )}
               </button>
             </div>
