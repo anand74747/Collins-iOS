@@ -13,7 +13,7 @@ const VideoPopup = ({ isOpen, onClose, scanData }) => {
 
   const VIDEO_BASE_URL = import.meta.env.VITE_API_BASE_URL
     ? `${import.meta.env.VITE_API_BASE_URL}/public/videos/`
-    : "http://192.168.10.135:81/api/v1/public/videos/";
+    : "http://192.168.2.2:81/api/v1/public/videos/";
 
   const getVideoUrl = useCallback(() => {
     if (!scanData) return null;
@@ -30,8 +30,7 @@ const VideoPopup = ({ isOpen, onClose, scanData }) => {
       } else {
         // Construct the correct URL - keep the full path including 'public/'
         const baseUrl =
-          import.meta.env.VITE_API_BASE_URL ||
-          "http://192.168.10.135:81/api/v1";
+          import.meta.env.VITE_API_BASE_URL || "http://192.168.2.2:81/api/v1";
         return `${baseUrl}/${firstVideoUrl}`;
       }
     }
@@ -50,8 +49,7 @@ const VideoPopup = ({ isOpen, onClose, scanData }) => {
         finalUrl = backendVideoUrl;
       } else {
         const baseUrl =
-          import.meta.env.VITE_API_BASE_URL ||
-          "http://192.168.10.135:81/api/v1";
+          import.meta.env.VITE_API_BASE_URL || "http://192.168.2.2:81/api/v1";
         finalUrl = baseUrl + "/" + backendVideoUrl;
       }
     } else if (backendVideoId) {
@@ -76,8 +74,7 @@ const VideoPopup = ({ isOpen, onClose, scanData }) => {
         } else {
           // Keep the full path including 'public/'
           const baseUrl =
-            import.meta.env.VITE_API_BASE_URL ||
-            "http://192.168.10.135:81/api/v1";
+            import.meta.env.VITE_API_BASE_URL || "http://192.168.2.2:81/api/v1";
           return `${baseUrl}/${url}`;
         }
       });

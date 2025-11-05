@@ -51,7 +51,7 @@ const CameraScanner = ({ onScanSuccess }) => {
       // Log API configuration for debugging
       const apiUrl =
         import.meta.env.VITE_IMAGE_PROCESSOR_URL ||
-        "http://192.168.10.135:81/api/v1/image-processor/scan-image";
+        "http://192.168.2.2:81/api/v1/image-processor/scan-image";
       const apiToken = import.meta.env.VITE_API_TOKEN;
 
       console.log("API Request:", {

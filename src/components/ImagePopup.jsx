@@ -7,7 +7,7 @@ export default function ImagePopup({ referenceImagePaths, onClose }) {
   if (!referenceImagePaths || referenceImagePaths.length === 0) return null;
 
   const baseUrl =
-    import.meta.env.VITE_API_BASE_URL || "http://192.168.10.135:81/api/v1";
+    import.meta.env.VITE_API_BASE_URL || "http://192.168.2.2:81/api/v1";
 
   const currentImageUrl = `${baseUrl}/${referenceImagePaths[currentImageIndex]}`;
 

@@ -43,9 +43,9 @@ A native Android application featuring real-time camera scanning with AR interfa
    Update the values in `.env`:
 
    ```env
-   VITE_API_BASE_URL=http://192.168.10.135:81/api/v1
+   VITE_API_BASE_URL=http://192.168.2.2:81/api/v1
    VITE_API_TOKEN=your_api_token_here
-   VITE_IMAGE_PROCESSOR_URL=http://192.168.10.135:81/api/v1/image-processor/scan-image
+   VITE_IMAGE_PROCESSOR_URL=http://192.168.2.2:81/api/v1/image-processor/scan-image
    ```
 
 ## Quick Start
